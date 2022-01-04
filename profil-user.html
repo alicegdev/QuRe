@@ -39,12 +39,12 @@
           <input
             type="text"
             class="form-control"
-            id="input_first_name"
+            id="input_first-name"
             aria-describedby="Prénom"
             placeholder="Prénom"
             disabled
           />
-        <a class="modify" href="#" id="modify-first-name">✏️</a></div>
+        <a class="modify" href="#" id="modify_first-name">✏️</a></div>
         </div>
         <!--TO DO : mettre la variable correspondante de la BDD dans le placeholder-->
         <div class="form-group">
@@ -53,9 +53,9 @@
           <input
             type="date"
             class="form-control"
-            id="input_first_name"
-            aria-describedby="Prénom"
-            placeholder="Prénom"
+            id="input_birthdate"
+            aria-describedby="Date de naissance"
+            placeholder="Date de naissance"
             disabled
           />
         <a class="modify" href="#" id="modify-birthdate">✏️</a></div>
@@ -81,17 +81,13 @@
           <input
             type="password"
             class="form-control"
-            id="input_password1"
+            id="input_password"
             placeholder="Mot de passe"
             disabled
           />
         <a class="modify" id="modify-password" href="#">✏️</a></div>
         </div>
-        <!--TO DO : récupérer le fichier stocké en BDD-->
-        <div class="form-group">
-            <label for="File Input">Copie de votre carte Vitale</label><br />
-            <input type="file" class="form-control-file" id="FormControlFile1">
-        </div>       
+        <!--TO DO : récupérer le fichier stocké en BDD-->    
         <button type="submit" class="btn btn-primary">Envoyer</button>
       </form>
     </section>
