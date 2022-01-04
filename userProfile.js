@@ -15,7 +15,7 @@ function pencil(modify, input) {
     let champ = document.getElementById(input);
     champ.disabled = false;
     if (champ.disabled === false) {
-      modify.innerHTML = "✔️";
+      modify.innerHTML = '<button class="cancel">Annuler</button>';
     }
   });
 }
