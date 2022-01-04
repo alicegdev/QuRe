@@ -12,7 +12,7 @@ document
       champAModifier.innerHTML =
         '<label for="secu_number">Numéro de Sécurité Sociale</label><input type="number" class="form-control" id="secu_number"aria-describedby="numéro de Sécurité Sociale" placeholder="Entrez votre n°SS suivi de la clé"/>';
       champAModifier2.innerHTML =
-        '<div class="form-group"><label for="File Input"></label><input type="file" class="form-control-file" id="FormControlFile1"></div>';
+        '<div class="form-group"><label for="File Input">Joignez une copie de votre carte Vitale</label><input type="file" class="form-control-file" id="FormControlFile1"></div>';
     } else if (e.target.value === "pharmacist") {
       champAModifier.innerHTML = "";
       champAModifier2.innerHTML = "";
