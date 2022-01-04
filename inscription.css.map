@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACH,UAAU,EAAE,MAAM;CAAG;;AAEzB,AAAA,iBAAiB,CAAC;EACd,WAAW,EAAE,KAAK;CAAG;;AAEzB,AAAA,WAAW,EAAE,OAAO,EAAE,IAAI,CAAC;EACvB,UAAU,EAAE,IAAI;CAAG;;AAEvB,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,GAAG;CAAG",
+    "sources": [
+        "inscription.sass"
+    ],
+    "names": [],
+    "file": "inscription.css"
+}

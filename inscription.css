@@ -1,0 +1,16 @@
+.title {
+  text-align: center;
+}
+
+.inscription-form {
+  margin-left: 30rem;
+}
+
+.form-group, .choice, .btn {
+  margin-top: 1rem;
+}
+
+.btn {
+  margin-left: 85%;
+}
+/*# sourceMappingURL=inscription.css.map */
