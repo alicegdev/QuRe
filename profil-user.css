@@ -1,0 +1,23 @@
+.champ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profil-user-form {
+  margin-left: 33%;
+  margin-right: 33%;
+}
+
+.form-group, .btn {
+  margin-top: 1rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.btn {
+  margin-left: 85%;
+}
+/*# sourceMappingURL=profil-user.css.map */

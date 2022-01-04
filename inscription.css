@@ -2,8 +2,8 @@
   text-align: center;
 }
 
-.inscription-form {
-  margin-left: 30rem;
+.inscription-form, .connection-form {
+  margin-left: 33%;
 }
 
 .form-group, .choice, .btn {
