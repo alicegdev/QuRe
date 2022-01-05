@@ -17,7 +17,8 @@ class PdoGsb{
             PdoGsb::$monPdo = null;
         }
 
-
+#GET INFO UTILISATEUR (patient, medecin, pharmacien)
+	
 public function getInfosMed($login, $mdp){
 		$req = "select utilisateur.id as id, 
 		utilisateur.nom as nom, 
@@ -30,16 +31,16 @@ public function getInfosMed($login, $mdp){
 	}
 
 
-	public function getInfosPatient($login, $mdp){
-		$req = "select utilisateur.id as id, 
-		utilisateur.nom as nom, 
-		utilisateur.prenom as prenom,
-		utilisateur.status from utilisateur 
-		where utilisateur.secuSocial='$login' and utilisateur.mdp='$mdp'";
-		$rs = PdoGsb::$monPdo->query($req);
-		$ligne = $rs->fetch();
-		return $ligne;
-	}
+public function getInfosPatient($login, $mdp){
+	$req = "select utilisateur.id as id, 
+	utilisateur.nom as nom, 
+	utilisateur.prenom as prenom,
+	utilisateur.status from utilisateur 
+	where utilisateur.secuSocial='$login' and utilisateur.mdp='$mdp'";
+	$rs = PdoGsb::$monPdo->query($req);
+	$ligne = $rs->fetch();
+	return $ligne;
+}
 
 	
 public function getInfosPharmacien($login, $mdp){
@@ -53,12 +54,56 @@ public function getInfosPharmacien($login, $mdp){
 	return $ligne;
 }
 	
+
+#MODIFIER LES DONNEES
+	
+ public function majInfoPatient($nom, $prenom, $dateNaiss, $email, $mdp){
+	$req= "update utilisateur
+	SET nom = '$nom', 
+	prenom = '$prenom',
+	dateNaissance = '$dateNaissance',
+	email = '$email',
+	mdp = '$mdp'
+	WHERE utilisateur.status = '1'";
+	$rs = PdoGsb::$monPdo->query($req);
+	$ligne = $rs->fetch();
+	return $ligne;
+}
+	
+	
+public function majInfoMedecin($nom, $prenom, $dateNaiss, $email, $mdp){
+	$req= "update utilisateur
+	SET nom = '$nom', 
+	prenom = '$prenom',
+	dateNaissance = '$dateNaissance',
+	email = '$email',
+	mdp = '$mdp'
+	WHERE utilisateur.status = '2'";
+	$rs = PdoGsb::$monPdo->query($req);
+	$ligne = $rs->fetch();
+	return $ligne;
+}	
+	
+	
+public function majInfoPharmacien($nom, $prenom, $dateNaiss, $email, $mdp){
+	$req= "update utilisateur
+	SET nom = '$nom', 
+	prenom = '$prenom',
+	dateNaissance = '$dateNaissance',
+	email = '$email',
+	mdp = '$mdp'
+	WHERE utilisateur.status = '3'";
+	$rs = PdoGsb::$monPdo->query($req);
+	$ligne = $rs->fetch();
+	return $ligne;
+}	
+	
 public function getStatusUser(){
 	$req = "select Status 
 	from utilisateur";
 	$rs = PdoGsb::$monPdo->query($req);
 	$ligne = $rs->fetch();
-	return $ligne;
+return $ligne;
 }
 
 ?>
