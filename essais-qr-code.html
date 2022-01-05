@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Scan</title>
+    <!--
+    <script src="qrcode.min.js"></script>
+    -->
+    <script src="html5-qrcode.min.js"></script>
+  </head>
+
+  <body>
+    <section class="title">Scan</section>
+    <!-- Générer le QR à partir d'un input-->
+    <!-- <input type="text" id="qr-data" onchange="generateQR()" />
+    <div id="qr_code"></div>
+  -->
+
+    <style>
+      .result {
+        background-color: green;
+        color: #fff;
+        padding: 20px;
+      }
+      .row {
+        display: flex;
+      }
+    </style>
+
+    <div class="row">
+      <div class="col">
+        <div style="width: 500px" id="reader"></div>
+      </div>
+      <div class="col" style="padding: 30px">
+        <h4>SCAN RESULT</h4>
+        <div id="result">Result Here</div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function onScanSuccess(qrCodeMessage) {
+        document.getElementById("result").innerHTML =
+          '<span class="result">' + qrCodeMessage + "</span>";
+      }
+
+      function onScanError(errorMessage) {
+        //handle scan error
+      }
+
+      var html5QrcodeScanner = new Html5QrcodeScanner("reader", {
+        fps: 10,
+        qrbox: 250,
+      });
+      html5QrcodeScanner.render(onScanSuccess, onScanError);
+    </script>
+    <!--    <script>
+      let qrData = document.getElementById("qr-data");
+      let qrCode = new QRCode(document.getElementById("qr_code"));
+      function generateQR() {
+        let data = qrData.value;
+        qrCode.makeCode(data);
+      }
+    </script>
+-->
+  </body>
+</html>
