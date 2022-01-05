@@ -6,7 +6,6 @@ let modifyFirstName = document.getElementById("modify_first-name");
 
 pencil(modifyPassword, "input_password");
 pencil(modifyEmail, "input_email");
-pencil(modifyBirthdate, "input_birthdate");
 pencil(modifyLastName, "input_last_name");
 pencil(modifyFirstName, "input_first-name");
 
