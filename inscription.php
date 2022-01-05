@@ -101,6 +101,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Envoyer</button>
       </form>
+      <p>Déjà inscrit ? <a href="connexion.php">Connectez-vous.</a></p>
       <?php 
       if($_POST['status']=="patient"){
         $statut = 1;
@@ -113,7 +114,7 @@
       $test1 = $pdo->inscription($_POST['nom'], $_POST['prenom'], $_POST['dateNaiss'], $_POST['email'], hash('sha256', $_POST['mdp']), $statut); 
       }
       else{
-        echo "Les mots de passes ne sont pas identique !";
+        echo "Les mots de passes ne sont pas identiques !";
       }
       ?>
     <div class="col-md-6"></div>
