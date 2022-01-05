@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Générer ordonnance</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="ordonnance.css" />
+  </head>
+  <body>
+    <section class="title">Créer une ordonnance</section>
+    <form>
+      <div class="ordonnance-form">
+        <div class="form-group">
+          <label for="drug_prescribed">Médicament prescrit</label>
+          <input
+            type="text"
+            class="form-control"
+            id="input_drug"
+            placeholder="Médicament prescrit"
+          />
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantité</label>
+          <input
+            type="number"
+            class="form-control"
+            id="input_quantity"
+            placeholder="Quantité"
+          />
+          <p class="text-details">mg</p>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Fréquence</label>
+          <input
+            type="number"
+            class="form-control"
+            id="input_posologie"
+            placeholder="Nombre de fois"
+          />
+          <p class="text-details">par</p>
+          <input
+            type="text"
+            class="form-control"
+            id="input_posologie"
+            placeholder="Jour, semaine..."
+          />
+        </div>
+        <a id="add_drug" href="#">➕ Ajouter médicament</a>
+        <div id="added_drug_inputs"></div>
+        <div class="form-group">
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="prescription_generate"
+          >
+            Générer ordonnance
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="ordonnance.js"></script>
+  </body>
+</html>

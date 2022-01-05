@@ -1,0 +1,32 @@
+
+.ordonnance-form {
+    margin-left: 25%;
+    width: 50%;
+}
+
+.form-group, .btn {
+    display: flex;
+    justify-content: column;
+  margin-top: 1rem;
+}
+
+.title {
+  text-align: center;
+}
+
+#prescription_generate, #add_drug {
+    display: flex;
+    width: max-content;
+    margin-left: auto;
+}
+
+.text-details {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+label {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
