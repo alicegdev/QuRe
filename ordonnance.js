@@ -13,14 +13,14 @@ let anotherDrug2 = document.createElement("a");
 function addDrugInput() {
   addDrugBtn.addEventListener("click", () => {
     addedDrugInputs.innerHTML =
-      '<div class="form-group"><label for="drug_prescribed">Médicament prescrit</label><input type="text" class="form-control" id="input_drug" placeholder="Médicament prescrit"/></div><div class="form-group"><label for="quantity">Quantité</label></div><div class="form-group"><input type="number" class="form-control" id="input_quantity" placeholder="Quantité"/><p class="text-details">mg</p><input type="number" class="form-control" id="input_posologie" placeholder="Nombre de fois"/><p class="text-details">par </p> <input type="text" class="form-control" id="input_posologie" placeholder="Jour, semaine..."/>';
+      '<div class="form-group"><label for="drug_prescribed">Médicament prescrit</label><input type="text" class="form-control" id="input_drug" placeholder="Médicament prescrit"/></div><div class="form-group"><label for="quantity">Quantité</label></div><div class="form-group"><input type="number" class="form-control" id="input_quantity" placeholder="Quantité"/><p class="text-details">mg</p><input type="number" class="form-control" id="input_posologie" placeholder="Nombre de fois"/><p class="text-details">par </p> <input type="text" class="form-control" id="input_posologie" placeholder="Jour, semaine..."/><div class="form-group"></div>';
     addedDrugInputs.appendChild(anotherDrug);
     anotherDrug.innerHTML = "<a href=#>➕ Ajouter médicament</a>";
     anotherDrug.style.marginLeft = "77%";
     anotherDrug.addEventListener("click", () => {
       anotherDrug.appendChild(anotherDrug2);
       anotherDrug2.innerHTML =
-        '<div class="form-group"><label for="drug_prescribed">Médicament prescrit</label><input type="text" class="form-control" id="input_drug" placeholder="Médicament prescrit"/></div><div class="form-group"><label for="quantity">Quantité</label></div><div class="form-group"><input type="number" class="form-control" id="input_quantity" placeholder="Quantité"/><p class="text-details">mg</p><input type="number" class="form-control" id="input_posologie" placeholder="Nombre de fois"/><p class="text-details">par </p> <input type="text" class="form-control" id="input_posologie" placeholder="Jour, semaine..."/>';
+        '<div></div><div class="form-group"><label for="drug_prescribed">Médicament prescrit</label><input type="text" class="form-control" id="input_drug" placeholder="Médicament prescrit"/></div><div class="form-group"><label for="quantity">Quantité</label></div><div class="form-group"><input type="number" class="form-control" id="input_quantity" placeholder="Quantité"/><p class="text-details">mg</p><input type="number" class="form-control" id="input_posologie" placeholder="Nombre de fois"/><p class="text-details">par </p> <input type="text" class="form-control" id="input_posologie" placeholder="Jour, semaine..."/></div><div class="form-group"><label for="drug_comment">Commentaire médicament</label><input type="text-area" size=500 class="form-control" id="input_drug_comment" placeholder="Commentaire traitement"/></div>';
     });
   });
 }
