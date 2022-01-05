@@ -48,8 +48,37 @@
             placeholder="Jour, semaine..."
           />
         </div>
+        <div class="form-group">
+          <label for="drug_comment">Commentaire médicament</label>
+          <input
+            type="text-area"
+            class="form-control"
+            id="input_drug_comment"
+            placeholder="Commentaire traitement"
+          />
+        </div>
         <a id="add_drug" href="#">➕ Ajouter médicament</a>
         <div id="added_drug_inputs"></div>
+        <div class="form-group">
+          <label for="drug_comment">Commentaire global</label>
+          <input
+            type="text-area"
+            class="form-control"
+            id="input_drug_comment"
+            placeholder="Commentaire global"
+          />
+        </div>
+        <div class="form-group">
+          <!-- TODO : ajouter un contrôle : la date de fin de validité ne peut être égale 
+          au jour même (ni à une date de + d'un an ?)-->
+          <label for="drug_comment">Date fin de validité</label>
+          <input
+            type="date"
+            class="form-control"
+            id="input_end_date"
+            placeholder="Date fin de validité"
+          />
+        </div>
         <div class="form-group">
           <button
             type="button"
