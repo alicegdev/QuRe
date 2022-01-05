@@ -98,6 +98,12 @@ public function majInfoPharmacien($nom, $prenom, $dateNaiss, $email, $mdp){
 	return $ligne;
 }	
 	
+
+#GetStatus : - 	#0 => Admin
+		#1 => Patient
+		#2 => medecin
+		#3 => pharmacien
+	
 public function getStatusUser(){
 	$req = "select Status 
 	from utilisateur";
