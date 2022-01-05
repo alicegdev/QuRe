@@ -52,5 +52,13 @@ public function getInfosPharmacien($login, $mdp){
 	$ligne = $rs->fetch();
 	return $ligne;
 }
+	
+public function getStatusUser(){
+	$req = "select Status 
+	from utilisateur";
+	$rs = PdoGsb::$monPdo->query($req);
+	$ligne = $rs->fetch();
+	return $ligne;
+}
 
 ?>
