@@ -13,15 +13,20 @@
   margin-top: 1rem;
 }
 
+.logo {
+  width: 10%;
+  height: 5%;
+}
 .title {
   text-align: center;
-}
-
-.btn {
-  margin-left: 85%;
 }
 
 .cancel {
   margin-left: 0.5rem;
 }
-/*# sourceMappingURL=profil-user.css.map */
+
+.buttons-container {
+  display: flex;
+  margin-left: none;
+  justify-content: space-between;
+}

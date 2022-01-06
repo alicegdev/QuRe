@@ -89,13 +89,11 @@
         <a class="modify" id="modify-password" href="#">✏️</a></div>
         </div>
         <div class="buttons-container">
-        <button type="submit" class="btn btn-primary">Envoyer</button>
-        <!-- DONE: ajouté bouton Reset: retour aux valeurs initiales -->
-        <button type="reset" class="btn btn-primary">Annuler</button>
+        <button type="submit" class="btn btn-primary">✔️ Envoyer</button>
         <!-- DONE: ajouté bouton supprimer compte-->
-        <button type="submit" name="supprimer_compte" class="btn btn-primary">Supprimer le compte</button>
+        <button type="submit" name="supprimer_compte" class="btn btn-primary">❌ Supprimer le compte</button>
         <!-- DONE : ajouté bouton déconnexion-->
-        <button type="button" name="deconnexion" class="btn btn-primary">Se déconnecter</button>
+        <button type="button" name="deconnexion" class="btn btn-primary">👤 Se déconnecter</button>
         </div>
       </form>
       <!-- TODO : ajouter requête DELETE pour supprimer le compte-->
