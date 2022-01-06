@@ -16,7 +16,7 @@
   <body>
       <?php   $test2 = $pdo->getInfoUtilisateur(1);  ?>
       <section class="header">
-        <a><img src="Fichiers hors-code/QuRe_logo.png" class="logo"></a></img>
+        <a href="espace-patient.php"><img src="Fichiers hors-code/QuRe_logo.png" class="logo"></a></img>
       </section>
       <section class="title">Informations personnelles</section>
       <form method="POST" action="profil-user.php">
