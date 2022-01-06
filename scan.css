@@ -1,9 +1,12 @@
-.btn-primary {
-  margin-top: 15%;
-  margin-left: 48%;
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.title {
-  text-align: center;
+.btn-primary {
+    margin-top: 3rem;
 }
-/*# sourceMappingURL=scan.css.map */
