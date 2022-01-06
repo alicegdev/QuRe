@@ -17,7 +17,48 @@ class PdoGsb{
             PdoGsb::$monPdo = null;
         }
 
-#GET INFO UTILISATEUR (patient, medecin, pharmacien)
+#GET Id UTILISATEUR (patient, medecin, pharmacien)
+	
+public function getIdMed(){
+		$req = "select rpps
+		from utilisateur
+		where status = '2'";
+		$rs = PdoTest::$monPdo->query($req);
+		$ligne = $rs->fetch();
+		return $ligne;
+	}
+
+	public function getIdPatient(){
+		$req= "select numSecu
+		from utilisateur
+		where status = '1'";
+		$rs = PdoTest::$monPdo->query($req);
+		$ligne = $rs->fetch();
+		return $ligne;
+	}
+	
+	public function getIdOrdonnance(){
+		$req="select id
+		from ordonnance";
+		$rs = PdoTest::$monPdo->query($req);
+		$ligne = $rs->fetch();
+		return $ligne;
+	}
+
+	public function getIdTraitement(){
+		$req="select traitement.id
+		from traitement
+		where traitement.ordonnance_id = ordonnance.id";
+		$rs = PdoTest::$monPdo->query($req);
+		$ligne = $rs->fetch();
+		return $ligne;
+	}
+	
+	
+
+#Get Info User (id, nom, prenom)
+	#medecin => RPPS
+	#patient => numSecu
 	
 public function getInfosMed($login, $mdp){
 		$req = "select utilisateur.id as id, 
