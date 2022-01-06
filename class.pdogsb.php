@@ -19,27 +19,45 @@ class PdoGsb{
 
 #GET Id UTILISATEUR (patient, medecin, pharmacien)
 	
-public function getIdMed(){
+	public function getIdMed($id){
 		$req = "select rpps
 		from utilisateur
-		where status = '2'";
+		where status = '2'
+		and utilisateur.id = '$id'";
 		$rs = PdoTest::$monPdo->query($req);
 		$ligne = $rs->fetch();
 		return $ligne;
 	}
 
-	public function getIdPatient(){
+	public function getIdPatient($id){
 		$req= "select numSecu
 		from utilisateur
-		where status = '1'";
+		where status = '1'
+		and utilisateur.id = '$id'";";
 		$rs = PdoTest::$monPdo->query($req);
 		$ligne = $rs->fetch();
 		return $ligne;
 	}
 	
-	public function getIdOrdonnance(){
+	public function getIdPharmacien($id){
+		$req= "select id
+		from utilisateur
+		where status = '3'
+		and utilisateur.id = '$id'";
+		$rs = PdoTest::$monPdo->query($req);
+		$ligne = $rs->fetch();
+		return $ligne;
+	}
+	
+	
+#GET ID (Ordonnance, Traitement) => Créer/Générer/lire un Pdf/QRCode
+	
+	public function getIdOrdonnance($idTraitement, $idPatient, $idMedecin){
 		$req="select id
-		from ordonnance";
+		from ordonnance
+		where ordonnance.id = '$idTraitement'
+		and ordonnance.idPatient = '$idPatient'
+		and ordonnance.idMedecin = '$idMedecin'";
 		$rs = PdoTest::$monPdo->query($req);
 		$ligne = $rs->fetch();
 		return $ligne;
