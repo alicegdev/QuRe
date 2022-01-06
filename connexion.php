@@ -8,7 +8,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="Style/inscription.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="inscription.css" />
   </head>
   <body>
     <section class="title">Se connecter</section>
@@ -39,6 +43,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Envoyer</button>
       </form>
+      <p class="inscription_lien">Pas d'identifiants ? <a href="inscription.php">Inscrivez-vous.</a></p>
       <?php
           $test1 = $pdo->connexion($_POST['email'], hash('sha256', $_POST['mdp']));
           

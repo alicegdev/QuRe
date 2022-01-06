@@ -13,4 +13,8 @@
 .btn {
   margin-left: 85%;
 }
-/*# sourceMappingURL=inscription.css.map */
+
+.title {
+  margin-top: 5rem;
+  font-family: 'Libre Baskerville', serif;
+}
