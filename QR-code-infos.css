@@ -10,3 +10,8 @@
 .return-link {
     padding-top: 1rem;
 }
+
+.title {
+    margin-top: 5rem;
+    font-family: 'Libre Baskerville', serif;
+}
