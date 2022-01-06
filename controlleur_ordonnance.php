@@ -7,8 +7,8 @@ $idMedecin = $pdo->getIdMed();
 
 switch($action) {
     case 'genererOrdonnance':{
-        $Medicament = $_REQUEST['medic']; #medicament
-        $Quantite = $_REQUEST['quantite']; #quantite de medicament
+        $medicament = $_REQUEST['medic']; #medicament
+        $quantite = $_REQUEST['quantite']; #quantite de medicament
         $frequence = $_REQUEST['frequence']; #frequence de prise de medcament => 2*/j
         $echelleTemps = $_REQUEST['echelleTemps']; #jours, semaine ....
         $commedic = $_REQUEST['commedic']; #Commentaire Medicament (du traitement) => condition d'utilisation
@@ -19,8 +19,8 @@ switch($action) {
     }
 
     case 'affichageOrdonnancePdf':{
-        $Medicament = $_REQUEST['medic']; #medicament
-        $Quantite = $_REQUEST['quantite']; #quantite de medicament
+        $medicament = $_REQUEST['medic']; #medicament
+        $quantite = $_REQUEST['quantite']; #quantite de medicament
         $frequence = $_REQUEST['frequence']; #frequence de prise de medcament => 2*/j
         $echelleTemps = $_REQUEST['echelleTemps']; #jours, semaine ....
         $commedic = $_REQUEST['commedic']; #Commentaire Medicament (du traitement) => condition d'utilisation
