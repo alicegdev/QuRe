@@ -1,5 +1,5 @@
 <?php
-
+#INITIALISATION BDD
 class PdoGsb{   		
       	private static $serveur='mysql:host=localhost';
       	private static $bdd='dbname=qure';   		
@@ -77,6 +77,7 @@ class PdoGsb{
 #Get Info User (id, nom, prenom)
 	#medecin => RPPS
 	#patient => numSecu
+#on reconnait le medecin a son numero RPPS tandis que le patient possède un numero de sécurité social
 	
 public function getInfosMed($login, $mdp){
 		$req = "select utilisateur.id as id, 
