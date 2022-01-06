@@ -13,9 +13,8 @@ switch($action) {
     }
 
     case 'affichageOrdonnancePdf':{
-        $idOrdonnance=$pdo->getIdOrdonnance();
         $idTraitement=$pdo->getIdTraitement();
-        $afficherOrdonnance=afficherOrdonnance($idOrdonnance, $idPatient, $idMedecin);
+        $idOrdonnance=$pdo->getIdOrdonnance($idTraitement, $idPatient, $idMedecin);
         include("ordonnance.php");
 
     }
