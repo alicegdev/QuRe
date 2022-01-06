@@ -14,7 +14,24 @@ function pencil(modify, input) {
     let champ = document.getElementById(input);
     champ.disabled = false;
     if (champ.disabled === false) {
-      modify.innerHTML = '<button class="cancel">Annuler</button>';
+      let boutonAnnuler = document.createElement("input");
+      // créer un élément type button, faire un appendChild sur Modify puis modifier ses attributs et son HTML
+      modify.innerHTML = "";
+      modify.appendChild(boutonAnnuler);
+      boutonAnnuler.value = "Annuler";
+      boutonAnnuler.type = "reset";
+      boutonAnnuler.addEventListener("click", () => {
+        if (champ.id === "input_last_name") {
+          champ.value = `${variableNom}`;
+        } else if (champ.id === "input_email") {
+          champ.value = `${variableEmail}`;
+        } else if (champ.id === "input_password") {
+          champ.value = `${variableMdp}`;
+        } else if (champ.id === "input_first-name") {
+          champ.value = `${variableMdp}`;
+        }
+        champ.readOnly = "readonly";
+      });
     }
   });
 }
