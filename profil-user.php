@@ -21,7 +21,6 @@
         <div class="form-group">
         <label for="name">Nom</label>
         <div class="champ">
-        <!--TO DO : mettre la variable correspondante de la BDD dans le placeholder-->
           <input
             type="text"
             class="form-control"
@@ -35,7 +34,6 @@
           <a class="modify" href="#" id="modify-last-name">✏️</a>
         </div>
         </div>
-        <!--TO DO : mettre la variable correspondante de la BDD dans le placeholder-->
         <div class="form-group">
           <label for="firstName">Prénom</label>
           <div class="champ">
@@ -50,7 +48,6 @@
           />
         <a class="modify" href="#" id="modify_first-name">✏️</a></div>
         </div>
-        <!--TO DO : mettre la variable correspondante de la BDD dans le placeholder-->
         <div class="form-group">
           <label for="dateOfBirth">Date de naissance</label>
           <div class="champ">
@@ -64,7 +61,6 @@
           />
         <a class="modify" href="#" id="modify-birthdate">✏️</a></div>
         </div>
-        <!--TO DO : mettre la variable correspondante de la BDD dans le placeholder-->
         <div class="form-group">
           <label for="exampleInputEmail1">Adresse e-mail</label>
           <div class="champ">
@@ -79,7 +75,6 @@
           />
         <a class="modify" href="#" id="modify-email">✏️</a></div>
         </div>
-        <!--TO DO : mettre la variable correspondante de la BDD dans le placeholder-->
         <div class="form-group">
           <label for="inputPassword1">Mot de passe</label>
           <div class="champ">
@@ -93,9 +88,15 @@
           />
         <a class="modify" id="modify-password" href="#">✏️</a></div>
         </div>
-        <!--TO DO : récupérer le fichier stocké en BDD-->    
         <button type="submit" class="btn btn-primary">Envoyer</button>
+        <!-- DONE: ajouté bouton Reset: retour aux valeurs initiales -->
+        <button type="reset" class="btn btn-primary">Annuler</button>
+        <!-- DONE: ajouté bouton supprimer compte-->
+        <button type="submit" name="supprimer_compte" class="btn btn-primary">Supprimer le compte</button>
+        <!-- DONE : ajouté bouton déconnexion-->
+        <button type="button" name="deconnexion" class="btn btn-primary">Se déconnecter</button>
       </form>
+      <!-- TODO : ajouter requête DELETE pour supprimer le compte-->
       <?php 
       if($_POST['nom']!=null OR $_POST['prenom']!=null OR $_POST['email']!=null OR $_POST['mdp']!=null){
       $test1 = $pdo->setInfoUtilisateur($_POST['nom'], $_POST['prenom'], $_POST['email'], hash('sha256', $_POST['mdp'])); 
