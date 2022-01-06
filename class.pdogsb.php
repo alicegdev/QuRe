@@ -33,7 +33,7 @@ class PdoGsb{
 		$req= "select numSecu
 		from utilisateur
 		where status = '1'
-		and utilisateur.id = '$id'";";
+		and utilisateur.id = '$id'";
 		$rs = PdoTest::$monPdo->query($req);
 		$ligne = $rs->fetch();
 		return $ligne;
