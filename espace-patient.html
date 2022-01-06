@@ -2,23 +2,39 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Générer ordonnance</title>
+    <title>Espace Patient</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="espace-patient.css" />
   </head>
   <body>
     <section class="title text-center">Espace Patient</section>
-    <div class="card-body">
-      <button type="button" class="btn btn-primary text-center">
-        QR Code informations médicales
+    <div class="buttons-container">
+      <button type="button" class="btn btn-primary">
+        <a
+          href="QR-code-infos.html"
+          class="text-center text-white text-decoration-none"
+          >QR Code informations médicales</a
+        >
       </button>
-      <button type="button" class="btn btn-primary text-center">
-        Scan dernière ordonnance
+      <button type="button" class="btn btn-primary">
+        <a
+          href="QR-code-ordonnance.html"
+          class="text-center text-white text-decoration-none"
+          >Scan dernière ordonnance</a
+        >
+      </button>
+      <button type="button" class="btn btn-primary">
+        <a
+          href="profil-user.html"
+          class="text-center text-white text-decoration-none"
+          >Modifier mes informations</a
+        >
       </button>
     </div>
-
+    <div class="col-md-4"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

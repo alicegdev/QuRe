@@ -2,16 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Scan</title>
-    <script src="qrcode.min.js"></script>
+    <title>QR Code infos médicales</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
   </head>
-
   <body>
-    <section class="title">Scan</section>
-    <!-- Générer le QR à partir d'un input-->
-    <input type="text" id="qr-data" onchange="generateQR()" />
+    <section class="title text-center">QR Code informations patient</section>
     <div id="qr_code"></div>
-
     <style>
       .result {
         background-color: green;
@@ -34,14 +33,15 @@
     </div>
 
     <script>
-      let qrData = document.getElementById("qr-data");
       let qrCode = new QRCode(document.getElementById("qr_code"));
       function generateQR() {
-        // Assigner la valeur de l'id à data au lieu de qrData.value
+        // Assigner la valeur de l'id à data au lieu de qrData.value : remplacer par requête GET
         let data = qrData.value;
-        // Make code est la fonction qui génère le QR code. Il prend la variable data en paramètres.
+        // .makeCode est la méthode qui génère le QR code. Il prend la variable de la ligne précédente
+        // en paramètres.
         qrCode.makeCode(data);
       }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

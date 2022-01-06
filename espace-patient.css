@@ -1,0 +1,12 @@
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    margin-top: 3rem;
+}
